@@ -1,22 +1,25 @@
 function saveState(state) {
+  console.log('saving state to chrome', state);
   chrome.storage.local.set({ state: JSON.stringify(state) });
 }
 
-// todos unmarked count
-function setBadge(todos) {
+// squares unmatched count
+function setBadge(squares) {
   if (chrome.browserAction) {
-    const count = todos.filter(todo => !todo.marked).length;
-    chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
+    const count = squares.filter(square => !square.matched).length;
+    chrome.browserAction.setBadgeText({
+      text: count > 0 ? count.toString() : ''
+    });
   }
 }
 
-export default function () {
+export default function() {
   return next => (reducer, initialState) => {
     const store = next(reducer, initialState);
     store.subscribe(() => {
       const state = store.getState();
       saveState(state);
-      setBadge(state.todos);
+      setBadge(state.squares);
     });
     return store;
   };

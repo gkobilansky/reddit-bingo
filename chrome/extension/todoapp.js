@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import Root from '../../app/containers/Root';
 import './todoapp.css';
 
-chrome.storage.local.get('state', (obj) => {
+chrome.storage.local.get('state', obj => {
   const { state } = obj;
   const initialState = JSON.parse(state || '{}');
+  console.log(initialState);
 
   const createStore = require('../../app/store/configureStore');
 

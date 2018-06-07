@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import todos from './todos';
+import squares from './squares';
 
 export default combineReducers({
-  todos
+  squares
 });

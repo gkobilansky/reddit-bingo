@@ -1,0 +1,18 @@
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.square:nth-child(even) {
+  background-color: #ccc;
+  color: #000;
+}
+
+.square.played {
+  background-color: blue;
+}

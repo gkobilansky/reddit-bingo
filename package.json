@@ -1,7 +1,7 @@
 {
-  "name": "react-chrome-extension-boilerplate",
-  "version": "0.9.0",
-  "description": "Boilerplate for Chrome extension React.js project",
+  "name": "reddit-bingo-2",
+  "version": "0.0.1",
+  "description": "A reddit bingo project",
   "scripts": {
     "dev": "node scripts/dev",
     "build": "node scripts/build",
@@ -12,12 +12,7 @@
     "test-e2e": "cross-env NODE_ENV=test mocha -r ./test/setup-app test/e2e",
     "test": "cross-env NODE_ENV=test mocha -r ./test/setup-app test/app"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jhen0409/react-chrome-extension-boilerplate.git"
-  },
-  "keywords": ["chrome", "extension", "react", "redux", "hot reload", "webpack", "boilerplate"],
-  "author": "Jhen <developer@jhen.me>",
+  "author": "Gene Kobilansky",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.3.15",
@@ -60,8 +55,10 @@
   },
   "dependencies": {
     "autoprefixer": "^7.2.5",
+    "axios": "^0.18.0",
     "bluebird": "^3.3.4",
     "classnames": "^2.1.3",
+    "js-search": "^1.4.2",
     "react": "^15.0.2",
     "react-dock": "^0.2.3",
     "react-dom": "^15.0.2",

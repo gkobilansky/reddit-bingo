@@ -15,11 +15,11 @@ function popWindow(type) {
     left: 100,
     top: 100,
     width: 800,
-    height: 475,
+    height: 475
   };
   if (type === 'open') {
     options.url = 'window.html';
-    chrome.windows.create(options, (win) => {
+    chrome.windows.create(options, win => {
       windowId = win.id;
     });
   }
@@ -29,12 +29,10 @@ chrome.contextMenus.create({
   id: CONTEXT_MENU_ID,
   title: 'React Chrome Extension Example',
   contexts: ['all'],
-  documentUrlPatterns: [
-    'https://github.com/*'
-  ]
+  documentUrlPatterns: ['https://www.reddit.com/*']
 });
 
-chrome.contextMenus.onClicked.addListener((event) => {
+chrome.contextMenus.onClicked.addListener(event => {
   if (event.menuItemId === CONTEXT_MENU_ID) {
     popWindow('open');
   }

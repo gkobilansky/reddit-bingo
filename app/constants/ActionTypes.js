@@ -1,6 +1,6 @@
-export const ADD_TODO = 'ADD_TODO';
-export const DELETE_TODO = 'DELETE_TODO';
-export const EDIT_TODO = 'EDIT_TODO';
-export const COMPLETE_TODO = 'COMPLETE_TODO';
-export const COMPLETE_ALL = 'COMPLETE_ALL';
-export const CLEAR_COMPLETED = 'CLEAR_COMPLETED';
+export const ADD_SQUARE = 'ADD_SQUARE';
+export const DELETE_SQUARE = 'DELETE_SQUARE';
+export const EDIT_SQUARE = 'EDIT_SQUARE';
+export const MATCH_SQUARE = 'COMPLETE_SQUARE';
+export const MATCH_ALL = 'MATCH_ALL';
+export const CLEAR_MATCHED = 'CLEAR_MATCHED';
