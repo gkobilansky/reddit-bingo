@@ -18,7 +18,7 @@ import style from './MainSection.css';
 
 export default class MainSection extends Component {
   static propTypes = {
-    board: PropTypes.array.isRequired,
+    // board: PropTypes.array.isRequired,
     actions: PropTypes.object.isRequired
   };
 

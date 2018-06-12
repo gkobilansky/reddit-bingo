@@ -5,7 +5,7 @@ import style from './Square.css';
 
 export default class Square extends Component {
   static propTypes = {
-    test: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     // deleteTodo: PropTypes.func.isRequired,
     matchSquare: PropTypes.func.isRequired
@@ -19,8 +19,10 @@ export default class Square extends Component {
   }
 
   handlePlay = () => {
-    this.setState({ matched: true });
+    //  this.setState({ matched: true });
+
     const { square, matchSquare } = this.props;
+    console.log(this.props);
     matchSquare(square.id);
   };
 
@@ -50,7 +52,9 @@ export default class Square extends Component {
       <div
         data-id={square.id}
         onClick={this.handlePlay}
-        className={this.state.matched ? style.square.played : style.square}>
+        className={
+          this.props.square.matched ? style.square.played : style.square
+        }>
         {square.text}
       </div>
     );

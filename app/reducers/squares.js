@@ -7,13 +7,13 @@ const initialState = [
     id: 0
   },
   {
-    id: 2,
-    text: 'SPLOOSH',
+    id: 1,
+    text: ':)',
     matched: false
   },
   {
-    id: 1,
-    text: ':)',
+    id: 2,
+    text: 'SPLOOSH',
     matched: false
   },
   {

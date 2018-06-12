@@ -1,6 +1,6 @@
 function saveState(state) {
   console.log('saving state to chrome', state);
-  chrome.storage.local.set({ state: JSON.stringify(state) });
+  chrome.storage.local.set(state, () => {});
 }
 
 // squares unmatched count
